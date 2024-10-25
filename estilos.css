@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    font-size: 16px;
+}
+
+header {
+    background-color: #428615;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    z-index: 1;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+nav {
+    background-color: #85c05e;
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.2em;
+    transition: color 0.3s; /* Añade un efecto de transición */
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: #f4f4f4; /* Cambia el color al pasar el mouse */
+}
+
+section {
+    padding: 20px;
+    margin: 20px; /* Añade margen entre secciones */
+    background-color: white; /* Fondo blanco para las secciones */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+h2 {
+    font-size: 2em; /* Tamaño de fuente mediano */
+    color: #000000; /* Color un poco más claro */
+    text-align: left; /* Alineación a la izquierda */
+    margin-bottom: 15px; /* Espacio debajo */
+    
+}
+h3{
+    /*Titulos al centro*/
+    font-family: 'Open Sans', sans-serif; /* Fuente deseada */
+    font-size: 2.5em; /* Tamaño grande para títulos */
+    color: black; /* Color oscuro para mejor contraste */
+    margin: 20px 0; /* Espaciado superior e inferior */
+    font-weight: 700; /* Peso de fuente más fuerte */
+    text-align: center; /* Centrar el texto */
+    text-transform: uppercase; /* Texto en mayúsculas para un toque formal */
+    letter-spacing: 1px; /* Espaciado entre letras */
+}
+h4{
+    /*Subtitulos al centro*/
+    font-family: 'Open Sans', sans-serif; /* Fuente deseada */
+    font-size: 1.5em; /* Tamaño más pequeño que h4 */
+    color: #4CAF50; /* Color gris oscuro para un contraste suave */
+    margin: 15px 0; /* Espaciado superior e inferior */
+    font-weight: 500; /* Peso de fuente medio */
+    text-align: center; /* Centrar el texto */
+    text-transform: capitalize; /* Capitaliza la primera letra de cada palabra */
+}
+footer {
+    background-color: #428615;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+ul {
+    list-style-type: disc; /* Estilo de lista */
+    padding-left: 20px; /* Espacio para la lista */
+}
+
+ul li {
+    margin: 5px 0; /* Margen entre elementos de lista */
+}
+
+.Logo {
+    width: 80px; 
+    height: auto;
+    position: absolute; 
+    top: 10px; 
+    left: 20px; 
+    z-index: 2; 
+}

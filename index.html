@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colegio Nacional Salto del Guairá</title>
+    <link rel="stylesheet" href="estilos.css">
+    <img src="images/Logo.png" alt="" class="Logo">
+    <style>
+        /* CSS para el carrusel */
+        .carousel-slide {
+            min-width: 100%; /* Cada imagen ocupa el 100% del contenedor */
+            box-sizing: border-box; /* Incluye padding y border en el ancho total */
+        }
+
+        .carousel img {
+            width: 60%; /* Cambia el tamaño de las imágenes */
+            margin: 0 auto; /* Centra las imágenes */
+            display: block; /* Asegura que las imágenes se comporten correctamente */
+            border-radius: 10px; /* Bordes redondeados */
+        }
+
+        button {
+            position: absolute;
+            top: 100%; /* Alinea verticalmente los botones a la mitad del carrusel */
+            transform: translateY(-50%); /* Ajusta para centrar los botones */
+            background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente */
+            border: none;
+            font-size: 24px; /* Tamaño del icono */
+            cursor: pointer;
+            border-radius: 5px;
+            padding: 10px; /* Espacio interno */
+            z-index: 1; /* Asegura que los botones estén por encima de las imágenes */
+        }
+
+        .prev {
+            left: 10px; /* Posición del botón anterior */
+        }
+
+        .next {
+            right: 10px; /* Posición del botón siguiente */
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <h1>Colegio Nacional Salto del Guairá</h1>
+    </header>
+
+    <nav>
+        <a href="historia.html">Historia</a>
+        <a href="Estudiantil.html">Estudiantil</a>
+        <a href="cuerpodocente.html">Cuerpo Docente</a>
+        <a href="MisionVision.html">Misión y Visión</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
+
+    <section>
+        <h3>Bienvenidos al Colegio Nacional Salto del Guairá</h3>
+        <h4>Compromiso y Calidad Desde 1972.</h4>
+    </section>
+
+    <!-- Carrusel de imágenes -->
+    <section class="carousel">
+        <div class="carousel-container">
+            <div class="carousel-slide">
+                <img src="images/inicio/carrusel1.jpg" alt="">
+            </div>
+            <div class="carousel-slide">
+                <img src="images/inicio/Carrusel2.jpg" alt="">
+            </div>
+            <div class="carousel-slide">
+                <img src="images/inicio/carrusel3.jpg" alt="">
+            </div>
+            <div class="carousel-slide">
+                <img src="images/inicio/carrusel4.jpg" alt="imagen 4">
+            </div>
+            <div class="carousel-slide">
+                <img src="images/inicio/carrusel5.jpg" alt="imagen 5">
+            </div>
+            <div class="carousel-slide">
+                <img src="images/inicio/carrusel6.jpg" alt="imagen 6">
+            </div>
+        </div>
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Colegio Nacional Salto del Guairá. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        let slideIndex = 0;
+        const slides = document.querySelectorAll('.carousel-slide');
+
+        function showSlides() {
+            slides.forEach((slide, index) => {
+                slide.style.display = (index === slideIndex) ? 'block' : 'none'; // Muestra la imagen actual
+            });
+        }
+
+        function changeSlide(n) {
+            slideIndex = (slideIndex + n + slides.length) % slides.length; // Cambia el índice de la imagen actual
+            showSlides(); // Muestra la nueva imagen
+        }
+
+        // Inicializa el carrusel mostrando la primera imagen
+        showSlides();
+
+        // Cambia de imagen automáticamente cada 3 segundos
+        setInterval(() => {
+            changeSlide(1); // Cambia a la siguiente imagen
+        }, 3000); // 3000 ms = 3 segundos
+    </script>
+    <section></section>
+</body>
+</html>
