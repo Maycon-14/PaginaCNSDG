@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organigrama-Colegio Nacional Salto del Guairá</title>
+    <link rel="stylesheet" href="estilos.css">
+    <style>
+        /* Contenedor del organigrama */
+.organigrama {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 30px;
+}
+
+/* Estilos para cada nivel */
+.nivel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    flex-wrap: wrap;  /* Permite que las personas se acomoden en varias filas */
+}
+
+/* Contenedor de cada persona */
+.persona {
+    text-align: center;
+    margin: 0 15px;
+    flex: 0 1 150px; /* Esto asegura que las personas tengan un tamaño mínimo y se ajusten */
+}
+
+/* Estilo de la imagen */
+.persona img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Nombre y cargo */
+.persona h3 {
+    margin: 10px 0 5px;
+    font-size: 16px;
+    color: #333;
+}
+
+.persona p {
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Líneas de conexión */
+.nivel::after {
+    content: "";
+    width: 80%;
+    height: 2px;
+    background-color: #4CAF50;
+    position: absolute;
+    top: 50%;
+    z-index: -1;
+}
+
+.nivel:first-child::after {
+    display: none;
+}
+
+    </style>
+</head>
+<header>
+    <img src="images/Logo.png" alt="" class="Logo">
+    <h1>Colegio Nacional Salto del Guairá</h1>
+    <img src="images/logo2.png" alt="" class="Logo2">
+</header>
+<nav>
+    <a href="index.html">Inicio</a>
+    <a href="historia.html">Historia</a>
+    <a href="Estudiantil.html">Estudiantil</a>
+    <a href="MisionVision.html">Misión y Visión</a>
+    <a href="novedades.html">Novedades</a>
+    <a href="cuerpodocente.html">Cuerpo Docente</a>
+    <a href="Contacto.html">Contacto</a>
+</nav>
+<body>
+    
+
+    <div class="organigrama">
+        <!-- Nivel de Directores -->
+        <div class="nivel">
+            <div class="persona">
+                <img src="images/Docentes/Nancy Recalde.jpeg" alt="Directora">
+                <h3>Nancy Recalde</h3>
+                <p>Directora Turno Mañana/Tarde</p>
+            </div>
+            <div class="persona">
+                <img src="images/Docentes/Rafael Fleitas.jpg" alt="Director">
+                <h3>Rafael Fleitas</h3>
+                <p>Director Turno Noche</p>
+            </div>
+        </div>
+
+         <!-- Nivel de Secretarios -->
+    <div class="nivel">
+        <div class="persona">
+            <img src="images/Docentes/Siria Santacruz.jpg" alt="Secretario">
+            <h3>Marco Fernández</h3>
+            <p>Secretario Académica</p>
+        </div>
+        <div class="persona">
+            <img src="images/Docentes/Maria Pabla Franco Cantero.jpg" alt="Secretaria">
+            <h3>Maria Pabla Franco Cantero</h3>
+            <p>Secretaria Académica</p>
+        </div>
+        <div class="persona">
+            <img src="images/Docentes/Lourdes Faccioli.jpeg" alt="Secretaria">
+            <h3>Lourdes Faccioli</h3>
+            <p>Secretaria Académica</p>
+        </div>
+        <div class="persona">
+            <img src="images/Docentes/Mirtha Carvallo.jpg" alt="Secretario">
+            <h3>Mirtha Carvallo</h3>
+            <p>Secretaria Académica</p>
+        </div>
+        <div class="persona">
+            <img src="images/Docentes/Sergio Rodriguez.jpeg" alt="Secretario">
+            <h3>Sergio Rodriguez</h3>
+            <p>Secretario Académica</p>
+        </div>
+    </div>
+    
+        <!-- Nivel de Docentes -->
+        <div class="nivel">
+            <div class="persona">
+                <img src="images/Docentes/Adela Fleitas.jpeg" alt="Docente">
+                <h3>Adela Fleitas</h3>
+                <p>Docente</p>
+            </div>
+            <div class="persona">
+                <img src="images/Docentes/Agueda Ferreira.jpg" alt="Docente">
+                <h3>Agueda Ferreira</h3>
+                <p>Docente</p>
+            </div>
+            <div class="persona">
+                <img src="images/Docentes/Alba Marisa Villalba.jpeg" alt="Docente">
+                <h3>Alba Marisa Villalba</h3>
+                <p>Docente</p>
+            </div>
+            <div class="persona">
+                <img src="images/Docentes/Ana Elizabeth Colman Riveros.jpg" alt="Docente">
+                <h3>Ana Colman</h3>
+                <p>Docente</p>
+            </div>
+            <div class="persona">
+                <img src="images/Docentes/Catalina Cespedes.jpeg" alt="Docente">
+                <h3>Catalina Cespedes</h3>
+                <p>Docente</p>
+            </div>
+            <div class="persona">
+                <img src="images/Docentes/Diana Cantero.jpg" alt="Docente">
+                <h3>Diana Cantero</h3>
+                <p>Docente</p>
+            </div>
+            <div class="persona">
+                <img src="images/Docentes/Edgar David Gomez.jpg" alt="Docente">
+                <h3>Edgar David Gomez</h3>
+                <p>Docente</p>            
+            </div>
+            <div class="persona">
+                <img src="images/Docentes/Eduardo Robertti.jpg" alt="Docente">
+                <h3>Eduardo Robertti</h3>
+                <p>Docente</p>         
+            </div>
+            <div class="persona">
+                <img src="images/Docentes/Elida Maria Bordon Zuarez.jpg" alt="Docente">
+                <h3>Elida Bordón</h3>
+                <p>Docente</p>            </div>
+            <div class="persona">
+                <img src="images/Docentes/Elsa Oitigoza.jpg" alt="Docente">
+                <h3>Elsa Ortigoza</h3>
+                <p>Docente</p>
+                        </div>
+            <div class="persona">
+                <img src="images/Docentes/Elvira Orellana.jpeg" alt="Docente">
+                <h3>Elvira Orellana</h3>
+                <p>Docente</p>
+            </div>
+            <div class="persona">
+                <img src="images/Docentes/Favio Torres.jpeg" alt="Docente">
+                <h3>Favio Torres</h3>
+                <p>Docente</p>
+            </div>
+            <div class="persona">
+                <img src="images/Docentes/Jose David Ortiz.jpg" alt="Docente">
+                <h3>Jose David Ortiz</h3>
+                <p>Docente</p>
+            </div>
+            <div class="persona">
+                <img src="images/Docentes/Juan Angel Gonzalez.jpg" alt="Docente">
+                <h3>Juan Angel Gonzalez</h3>
+                <p>Docente</p>
+            </div>
+            <div class="persona">
+                <img src="images/Docentes/Juan Duarte.jpeg" alt="Docente">
+                <h3>Juan Duarte</h3>
+                <p>Docente</p>
+            </div>
+            <div class="persona">
+                <img src="images/Docentes/Julia Ayala.jpg" alt="Docente">
+                <h3>Julia Ayala</h3>
+                <p>Docente</p>
+            </div>
+            <div class="persona">
+                <img src="images/Docentes/Leonardo Chaparro.jpg" alt="Docente">
+                <h3>Leonardo Chaparro</h3>
+                <p>Docente</p>
+            </div>
+            <div class="persona">
+                <img src="images/Docentes/Lilian Jara.jpg" alt="Docente">
+                <h3>Lilian Jara</h3>
+                <p>Docente</p>
+            </div>
+            <div class="persona">
+                <img src="images/Docentes/Magdalena Lopez.jpg" alt="Docente">
+                <h3>Magdalena Lopez</h3>
+                <p>Docente</p>
+            </div>
+            <div class="persona">
+                <img src="images/Docentes/Maida Ferreira de Arredondo.jpg" alt="Docente">
+                <h3>Maida Ferreira de Arredondo</h3>
+                <p>Docente</p>
+            </div>
+            <div class="persona">
+                <img src="images/Docentes/Marlene Isabel Amarilla Ojeda.jpg" alt="Docente">
+                <h3>Marlene Isabel Amarilla Ojeda</h3>
+                <p>Docente</p>
+            </div>
+            <div class="persona">
+                <img src="images/Docentes/Mirtha Letizia Lombardo Godoy.jpeg" alt="Docente">
+                <h3>Mirtha Letizia Lombardo Godoy</h3>
+                <p>Docente</p>
+            </div>
+            <div class="persona">
+                <img src="images/Docentes/Nelson Colman.jpeg" alt="Docente">
+                <h3>Nelson Colman</h3>
+                <p>Docente</p>
+            </div>
+            <div class="persona">
+                <img src="images/Docentes/Olimpio Leiva.jpeg" alt="Docente">
+                <h3> Olímpio Leiva</h3>
+                <p>Docente</p>
+            </div>
+            <div class="persona">
+                <img src="images/Docentes/Oscar Benitez.jpeg" alt="Docente">
+                <h3>Oscar Benitez</h3>
+                <p>Docente</p>
+            </div>
+            <div class="persona">
+                <img src="images/Docentes/Osvaldo Ullon.jpeg" alt="Docente">
+                <h3>Osvaldo Ullon</h3>
+                <p>Docente</p>
+            </div>
+            <div class="persona">
+                <img src="images/Docentes/Rilsys.jpg" alt="Docente">
+                <h3>Rilsys Salinas</h3>
+                <p>Docente</p>
+            </div>
+            <div class="persona">
+                <img src="images/Docentes/Suny Meza.jpg" alt="Docente">
+                <h3>Ana García</h3>
+                <p>Docente</p>
+            </div>
+        </div>
+    
+        <!-- Nivel de Colaboradores -->
+        <div class="nivel">
+            <div class="persona">
+                <img src="images/Docentes/Diana Rita Nuñez Garrido.jpg" alt="Colaborador">
+                <h3>Diana Rita Nuñez Garrido</h3>
+                <p>Colaboradora</p>
+            </div>
+            <div class="persona">
+                <img src="images/Docentes/Raquel.jpeg" alt="Colaboradora">
+                <h3>Marta Raquel Gonzalez Ojeda</h3>
+                <p>Colaboradora</p>
+            </div>
+            <div class="persona">
+                <img src="images/Docentes/Dalma Encina.jpeg" alt="Colaboradora">
+                <h3>Dalma Encina</h3>
+                <p>Colaboradora</p>
+            </div>
+        </div>
+    
+        <!-- Nivel de Personal de Mantenimiento -->
+        <div class="nivel">
+            <div class="persona">
+                <img src="images/Mantenimiento/mantenimiento1.jpg" alt="Personal de Mantenimiento">
+                <h3>Alfonso Mena</h3>
+                <p>Mantenimiento</p>
+            </div>
+            <div class="persona">
+                <img src="images/Mantenimiento/mantenimiento2.jpg" alt="Personal de Mantenimiento">
+                <h3>Laura González</h3>
+                <p>Mantenimiento</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,25 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
     font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Estilos para justificar el texto */
+section {
+    text-align: justify; /* Justifica el texto dentro de la sección */
+    margin: 20px; /* Añade margen alrededor de la sección */
+}
+ul {
+    text-align: justify; /* Justifica el texto dentro de listas */
+}
+/* Opcional: Añadir un estilo para mejorar el espaciado de las listas */
+li {
+    margin-bottom: 10px; /* Espacio entre los elementos de la lista */
 }
 
 header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: #428615;
     color: white;
     text-align: center;
     padding: 20px 0;
     position: relative;
     z-index: 1;
+
+        gap: 20px;               /* Ajusta el espacio entre las imágenes */
 }
 
 header h1 {
     margin: 0;
     font-size: 2.5em;
+    text-align: center;
 }
 
 nav {
@@ -54,10 +74,10 @@ h2 {
     color: #000000; /* Color un poco más claro */
     text-align: left; /* Alineación a la izquierda */
     margin-bottom: 15px; /* Espacio debajo */
-    
 }
-h3{
-    /*Titulos al centro*/
+
+h3 {
+    /* Titulos al centro */
     font-family: 'Open Sans', sans-serif; /* Fuente deseada */
     font-size: 2.5em; /* Tamaño grande para títulos */
     color: black; /* Color oscuro para mejor contraste */
@@ -67,16 +87,17 @@ h3{
     text-transform: uppercase; /* Texto en mayúsculas para un toque formal */
     letter-spacing: 1px; /* Espaciado entre letras */
 }
-h4{
-    /*Subtitulos al centro*/
+
+h4 {
+    /* Subtítulos al centro */
     font-family: 'Open Sans', sans-serif; /* Fuente deseada */
-    font-size: 1.5em; /* Tamaño más pequeño que h4 */
+    font-size: 1.5em; /* Tamaño más pequeño que h3 */
     color: #4CAF50; /* Color gris oscuro para un contraste suave */
     margin: 15px 0; /* Espaciado superior e inferior */
     font-weight: 500; /* Peso de fuente medio */
     text-align: center; /* Centrar el texto */
-    text-transform: capitalize; /* Capitaliza la primera letra de cada palabra */
-}
+ }
+
 footer {
     background-color: #428615;
     color: white;
@@ -102,10 +123,154 @@ ul li {
 }
 
 .Logo {
-    width: 80px; 
+    width: 105px;
     height: auto;
-    position: absolute; 
-    top: 10px; 
-    left: 20px; 
-    z-index: 2; 
+    z-index: 2;
+}
+.Logo2 {
+    width: 200px;
+    height: auto;
+    z-index: 2;
+}
+/*Configuracion para imagenes docentes */
+.docente {
+    display: flex;
+    align-items: center;
+}
+.docente img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+/* Hacer que las imágenes sean responsivas */
+img {
+    max-width: 100%;  /* Asegura que las imágenes no se desborden y se ajusten al ancho de su contenedor */
+    height: auto;     /* Mantiene la proporción original de la imagen */
+}
+
+/* Estilos específicos para las imágenes con clase "imagen" */
+.imagen,
+.imagen2 {
+    max-width: 100%;  /* Las imágenes no se desbordarán y ocuparán todo el ancho disponible */
+    height: auto;     /* Mantiene la proporción original */
+}
+
+/* Si quieres ajustar el tamaño máximo para las imágenes de estas clases, puedes hacerlo aquí */
+.imagen {
+    width: 100%;      /* Ajustamos el ancho al 100% del contenedor, pero nunca más grande que eso */
+}
+
+.imagen2 {
+    width: 100%;      /* Igual que .imagen, ocupando el 100% del ancho del contenedor */
+}
+
+/* Para dispositivos con un ancho máximo de 768px (tabletas y móviles en modo horizontal) */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    h3 {
+        font-size: 2em;
+        text-align: justify;
+    }
+
+    .container {
+        padding: 0 15px;
+        max-width: 100%;
+    }
+
+    nav {
+        padding: 10px;
+    }
+
+    nav a {
+        font-size: 1em;
+        margin: 0 10px;
+    }
+
+    .docente {
+        display: flex;
+        align-items: center;
+    }
+    .docente img {
+        width: 120px;
+        height: 150px;
+        border-radius: 50%;
+        margin-right: 20px;
+    }
+
+    .Logo {
+        width: 80px; /* Reduce el tamaño de la imagen */
+    }
+
+    .Logo2 {
+        width: 150px; /* Reduce el tamaño de la otra imagen */
+    }
+    .imagen,
+    .imagen2 {
+        width: 90%;  /* Ajustamos las imágenes al 90% del ancho de su contenedor en pantallas más pequeñas */
+        margin: 0 auto;  /* Centra las imágenes si es necesario */
+    }
+}
+
+/* Para dispositivos con un ancho máximo de 480px (móviles en modo vertical) */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1em;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    h3 {
+        font-size: 1.2em;
+        text-align: left
+    }
+
+    nav {
+        padding: 10px 0;
+    }
+
+    nav a {
+        font-size: 0.8em;
+        margin: 5px 0;
+    }
+
+    section {
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .docente {
+        display: flex;
+        align-items: center;
+    }
+    .docente img {
+        width: 100px;
+        height: 90px;
+        border-radius: 50%;
+        margin-right: 20px;
+    }
+
+    .Logo {
+        width: 50px;
+    }
+
+    .Logo2 {
+        width: 70px;
+    }
+    .imagen,
+    .imagen2 {
+        width: 80%;  /* Ajustamos aún más las imágenes en pantallas muy pequeñas */
+        margin: 0 auto;  /* Centra las imágenes si es necesario */
+    }
 }
