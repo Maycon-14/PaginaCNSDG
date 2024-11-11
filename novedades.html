@@ -20,57 +20,135 @@
             border-radius: 8px;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
         }
+/* Carrusel general */
+.carrusel {
+    width: 80%;
+    max-width: 500px;
+    margin: 30px auto;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, #1e90ff, #ff6347);
+}
 
-        .carrusel {
-            position: relative;
-            width: 20%;
-            max-width: 500px;
-            margin: 30px auto;
-            overflow:hidden;
-        }
+@media (min-width: 768px) {
+    .carrusel {
+        width: 50%;
+    }
+}
 
-        .carousel-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+/* Contenedor de imágenes del carrusel */
+.carousel-images {
+    display: flex;
+    transition: transform 0.6s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
 
-        .carousel-images {
-            display: flex;
-            transition: transform 0.5s ease;
-        }
+/* Imágenes dentro del carrusel */
+.carousel-images img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
 
-        .carousel-images img {
-            width: 100%;
-            height: auto;
-            object-fit: cover;
-            border-radius: 8px;
-        }
+/* Botones de navegación */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 22px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
 
-        .prev, .next {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            border: none;
-            padding: 10px;
-            cursor: pointer;
-            font-size: 18px;
-        }
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
 
-        .prev:hover, .next:hover {
-            background-color: rgba(0, 0, 0, 0.7);
-        }
+.prev {
+    left: 15px;
+}
 
-        .prev {
-            left: 10px;
-        }
+.next {
+    right: 15px;
+}
 
-        .next {
-            right: 10px;
-        }
-    </style>
+.carruselh {
+    width: 80%;
+    max-width: 800px;
+    margin: 30px auto;
+    overflow: hidden;
+    position: relative;
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, #1e90ff, #ff6347);
+    border: 5px solid #fff;  /* Añadido borde blanco para contraste */
+    height: 400px;  /* Altura fija del carrusel */
+}
+
+@media (min-width: 768px) {
+    .carruselh {
+        width: 70%;
+    }
+}
+
+/* Contenedor de las imágenes en el carrusel */
+.carousel-images-horizontal {
+    display: flex;
+    transition: transform 0.6s cubic-bezier(0.25, 0.1, 0.25, 1);
+    gap: 10px;
+    height: 100%;  /* Asegura que las imágenes ocupen toda la altura del carrusel */
+}
+
+/* Imágenes dentro del carrusel */
+.carousel-images-horizontal img {
+    width: 100%;  /* Las imágenes ocuparán todo el contenedor */
+    height: 100%;  /* Mantiene la altura del contenedor */
+    object-fit: cover;  /* Cubre todo el contenedor sin distorsionarse */
+    flex-shrink: 0; /* Evita que las imágenes se encojan */
+    border-radius: 8px;
+    transition: box-shadow 0.3s ease;  /* Solo transición para la sombra */
+}
+
+/* Elimina el zoom de las imágenes al hacer hover */
+.carousel-images-horizontal img:hover {
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.5);  /* Sombra más prominente */
+}
+
+/* Botones de navegación */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 22px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+    left: 15px;
+}
+
+.next {
+    right: 15px;
+}
+
+</style>
 </head>
 <body>
     <header>
@@ -119,7 +197,7 @@
     </p>
     
     <!-- Carrusel de imágenes -->
-    <div class="carrusel">
+    <div class="carrusel carrusel1">
         <div class="carousel-container">
             <div class="carousel-images" id="carouselImages1">
                 <img src="images/novedades/Proyecto ñe´ery 2024/carrusel1.jpg" alt="Imagen 1">
@@ -131,9 +209,8 @@
                 <img src="images/novedades/Proyecto ñe´ery 2024/carrusel7.jpg" alt="Imagen 7">
                 <img src="images/novedades/Proyecto ñe´ery 2024/carrusel8.jpg" alt="Imagen 8">
             </div>
-            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
-            <button class="next" onclick="moveSlide(1)">&#10095;</button>
-        </div>
+            <button class="prev" onclick="moveSlide(-1, 1)">&#10094;</button>
+            <button class="next" onclick="moveSlide(1, 1)">&#10095;</button>
     </div>
 </section>
 <section>
@@ -152,63 +229,146 @@
         <p>Queremos reconocer también a nuestros alumnos, quienes con esfuerzo y dedicación llevaron adelante cada proyecto. Ellos son el verdadero motor de esta feria, demostrando que el aprendizaje va más allá del aula y se convierte en experiencias significativas.</p>
         <p>Por último, extendemos un agradecimiento especial a nuestros youtubers invitados Rafael, Lucas y Evelyn, quienes, a través de sus transmisiones en vivo, permitieron que nuestra feria llegara a una audiencia más amplia, compartiendo la emoción de este evento con todos.</p>
         <p>Con este agradecimiento, cerramos esta Expoferia de Física y Química, agradeciendo a todos por su participación y apoyo. Que este sea un paso más en el camino del aprendizaje, el compañerismo y el compromiso con la educación.</p>
-        <div class="carrusel">
+        <div class="carruselh">
             <div class="carousel-container">
-                <div class="carousel-images" id="carouselImages2">
+                <div class="carousel-images-horizontal" id="carouselImagesHorizontal1">
                     <img src="images/Expociencias2024/1.jpeg" alt="Imagen 1">
                     <img src="images/Expociencias2024/2.jpeg" alt="Imagen 2">
                     <img src="images/Expociencias2024/3.jpeg" alt="Imagen 3">
                     <img src="images/Expociencias2024/4.jpeg" alt="Imagen 4">
                     <img src="images/Expociencias2024/5.jpeg" alt="Imagen 5">
                     <img src="images/Expociencias2024/6.jpeg" alt="Imagen 6">
-                    <img src="images/Expociencias2024/7.jpeg" alt="Imagen 7">
-                    <img src="images/Expociencias2024/8.jpeg" alt="Imagen 8">
-                    <img src="images/Expociencias2024/9.jpeg" alt="Imagen 1">
-                    <img src="images/Expociencias2024/10.jpeg" alt="Imagen 1">
+
                 </div>
-                <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
-        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+                <button class="prev" onclick="moveHorizontalSlide(-1, 1)">&#10094;</button>
+        <button class="next" onclick="moveHorizontalSlide(1, 1)">&#10095;</button>
     </div>
     </section>
 
+    <section>
+        <h3>Microempresas</h3>
+        <div class="carruselh">
+            <div class="carousel-container">
+                <div class="carousel-images-horizontal" id="carouselImagesHorizontal2">
+                <img src="images/Microempresa/1.jpg" alt="">
+                <img src="images/Microempresa/2.jpg" alt="">
+                <img src="images/Microempresa/3.jpg" alt="">
+                <img src="images/Microempresa/4.jpg" alt="">
+                <img src="images/Microempresa/5.jpg" alt="">
+                <img src="images/Microempresa/6.jpg" alt="">
+                <img src="images/Microempresa/7.jpg" alt="">
+                <img src="images/Microempresa/8.jpg" alt="">
+                <img src="images/Microempresa/9.jpg" alt="">
+                <img src="images/Microempresa/10.jpg" alt="">
+                <img src="images/Microempresa/11.jpg" alt="">
+                <img src="images/Microempresa/12.jpg" alt="">
 
-    <script>
-        let index1 = 0;
-        let index2 = 0;
 
-        function moveSlide(step, carouselNumber) {
-            let index, images, totalImages;
+            </div>
+            <button class="prev" onclick="moveHorizontalSlide(-1, 2)">&#10094;</button>
+        <button class="next" onclick="moveHorizontalSlide(1, 2)">&#10095;</button>
+</div>
+</section>
 
-            if (carouselNumber === 1) {
-                index = index1 += step;
-                images = document.querySelectorAll("#carouselImages1 img");
-                totalImages = images.length;
-            } else {
-                index = index2 += step;
-                images = document.querySelectorAll("#carouselImages2 img");
-                totalImages = images.length;
-            }
+<script>
+    // Índices para cada carrusel
+    let index1 = 0;
+    let index2 = 0;
+    let index3 = 0;
 
-            if (index < 0) {
-                index = totalImages - 1;
-            } else if (index >= totalImages) {
-                index = 0;
-            }
+    function moveSlide(step, carouselNumber) {
+        let index, images, totalImages;
 
-            const offset = -index * 100;
-            images[0].parentNode.style.transform = `translateX(${offset}%)`;
-
-            if (carouselNumber === 1) {
-                index1 = index;
-            } else {
-                index2 = index;
-            }
+        // Selecciona el índice y las imágenes correspondientes según el número del carrusel
+        if (carouselNumber === 1) {
+            index1 += step;
+            index = index1;
+            images = document.querySelectorAll("#carouselImages1 img");
+            totalImages = images.length;
+        } else if (carouselNumber === 2) {
+            index2 += step;
+            index = index2;
+            images = document.querySelectorAll("#carouselImages2 img");
+            totalImages = images.length;
+        } else if (carouselNumber === 3) {
+            index3 += step;
+            index = index3;
+            images = document.querySelectorAll("#carouselImages3 img");
+            totalImages = images.length;
         }
 
-        // Desplazamiento automático para ambos carruseles (cada 3 segundos)
-        setInterval(() => moveSlide(1, 1), 3000);
-        setInterval(() => moveSlide(1, 2), 3000);
-    </script>
+        // Asegura que el índice esté en el rango de las imágenes
+        if (index < 0) {
+            index = totalImages - 1;
+        } else if (index >= totalImages) {
+            index = 0;
+        }
+
+        // Mueve el carrusel
+        const offset = -index * 100;
+        images[0].parentNode.style.transform = `translateX(${offset}%)`;
+
+        // Actualiza el índice correspondiente
+        if (carouselNumber === 1) {
+            index1 = index;
+        } else if (carouselNumber === 2) {
+            index2 = index;
+        } else if (carouselNumber === 3) {
+            index3 = index;
+        }
+    }
+
+    // Desplazamiento automático opcional para los tres carruseles (cada 3 segundos)
+    setInterval(() => moveSlide(1, 1), 3000);
+    setInterval(() => moveSlide(1, 2), 3000);
+    setInterval(() => moveSlide(1, 3), 3000);
+
+    // Índices para ambos carruseles horizontales
+let indexHorizontal1 = 0;
+let indexHorizontal2 = 0;
+
+function moveHorizontalSlide(step, carouselNumber) {
+    let index, images, totalImages;
+
+    // Control del carrusel basado en el número
+    if (carouselNumber === 1) {
+        indexHorizontal1 += step;
+        index = indexHorizontal1;
+        images = document.querySelectorAll("#carouselImagesHorizontal1 img");
+        totalImages = images.length;
+    } else if (carouselNumber === 2) {
+        indexHorizontal2 += step;
+        index = indexHorizontal2;
+        images = document.querySelectorAll("#carouselImagesHorizontal2 img");
+        totalImages = images.length;
+    }
+
+    // Ajuste del índice para no salir de los límites
+    if (index < 0) {
+        index = totalImages - 1;
+    } else if (index >= totalImages) {
+        index = 0;
+    }
+
+    // Cálculo del desplazamiento horizontal
+    const offset = -index * (images[0].clientWidth + 10); // Incluye margen entre imágenes
+    images[0].parentNode.style.transform = `translateX(${offset}px)`;
+
+    // Actualización del índice correcto
+    if (carouselNumber === 1) {
+        indexHorizontal1 = index;
+    } else if (carouselNumber === 2) {
+        indexHorizontal2 = index;
+    }
+}
+
+// Desplazamiento automático para cada carrusel horizontal (cada 6 segundos)
+setInterval(() => moveHorizontalSlide(1, 1), 6000);
+setInterval(() => moveHorizontalSlide(1, 2), 6000);
+
+</script>
+
+
 
 <section></section>
 <section>
