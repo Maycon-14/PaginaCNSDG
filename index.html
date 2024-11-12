@@ -133,34 +133,7 @@
         setInterval(() => moveSlide(1), 5000);
     </script>
 
-    <script>
-        // Función para contar visitantes
-        function countVisitors() {
-            // Verifica si ya existe un contador en localStorage
-            let visitorCount = localStorage.getItem('visitorCount');
-
-            // Si no existe, inicializa el contador
-            if (!visitorCount) {
-                visitorCount = 0;
-            }
-
-            // Incrementa el contador
-            visitorCount++;
-
-            // Guarda el nuevo contador en localStorage
-            localStorage.setItem('visitorCount', visitorCount);
-
-            // Muestra el número de visitantes en la página
-            const visitorDisplay = document.createElement('div');
-            visitorDisplay.style.textAlign = 'center';
-            visitorDisplay.style.marginTop = '20px';
-            visitorDisplay.innerHTML = `<h4>Número de visitas: ${visitorCount}</h4>`;
-            document.body.appendChild(visitorDisplay);
-        }
-
-        // Llama a la función al cargar la página
-        countVisitors();
-    </script>
+    
 <section></section><section><section></section></section>
     <footer>
         <p>&copy; 2024 Colegio Nacional Salto del Guairá. Todos los derechos reservados.</p>
